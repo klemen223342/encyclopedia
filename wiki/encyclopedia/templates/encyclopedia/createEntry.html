@@ -1,0 +1,24 @@
+{% extends "encyclopedia/layout.html"%}
+
+{% block title%}
+    Create new page
+{% endblock %}
+{%block body%}
+
+    <h1 class="mx-3">Create your own page</h1>
+    <form action="{% url 'encyclopedia:create_entry'%}" method="post" style="height:50vh" class=" mx-5 title mb-3 my-5 d-flex justify-content-center flex-column">
+    
+       <label for="title">Title:</label>
+        {% csrf_token%}
+        {{title.title}}
+        <label for="text">Text:</label>
+        {% csrf_token%}
+        {{text.text}}
+        <button class="btn w-25 btn-dark" type="submit">Submit</button>
+
+
+    
+    </form>
+   
+    
+{% endblock %}

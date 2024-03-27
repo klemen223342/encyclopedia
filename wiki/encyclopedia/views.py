@@ -14,10 +14,10 @@ class SearchForm(forms.Form):
     search = forms.CharField(widget=forms.TextInput(attrs={'autocomplete':'off','class':'search','placeholder':'Search'}))
 
 class PageTitle(forms.Form):
-    title = forms.CharField(widget=forms.TextInput(attrs={'autocomplete':'off','id':'title', 'class':'form-control w-25','placeholder':'Select title'}))
+    title = forms.CharField(widget=forms.TextInput(attrs={'autocomplete':'off','id':'title', 'class':' form-control w-25','placeholder':'Select title'}))
 
 class TextForm(forms.Form):
-    text = forms.CharField(widget=forms.TextInput(attrs={'autocomplete':'off','id':'text','class':'form-control w-25 my-5 h-50','placeholder':'Your text'}))
+    text = forms.CharField(widget=forms.Textarea(attrs={'autocomplete':'off','id':'text','class':' my-5 form-control w-50 h-50','placeholder':'Your text'}))
 
 def index(request):
 
